@@ -1,0 +1,23 @@
+<h1>Count page</h1>
+<a href="{% url 'home' %}">Re-start</a>
+
+<h3>You have entered {{count}} words :</h3>
+
+<p>{{fulltext}}</p>
+
+
+<h3>Words Count: </h3><br>
+
+{% for word, wordcount in words_count %}
+
+{{word}}: {{wordcount}}<br>
+
+{% endfor %}
+
+<h3>Min words list: </h3>
+
+{% for minword in min_items %}
+
+{{minword}},
+
+{% endfor %}
